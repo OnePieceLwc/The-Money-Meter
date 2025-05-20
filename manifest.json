@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "牛马打鸡血仪",
+  "version": "1.0.0",
+  "description": "上班摸鱼神器，实时展示你的每秒收入和今日已赚，打工人专属打鸡血工具！",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["storage"]
+} 

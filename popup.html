@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>牛马打鸡血仪</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="popup.css" rel="stylesheet">
+</head>
+<body>
+  <canvas id="bg-effect"></canvas>
+  <div id="app">
+    <div class="header">
+      <h1>🐮牛马打鸡血仪</h1>
+      <button id="toggle-settings">⚙️</button>
+    </div>
+    <div id="settings-panel" class="settings hidden">
+      <div>
+        <label>薪资模式：</label>
+        <select id="salary-mode">
+          <option value="month">月薪</option>
+          <option value="day">日薪</option>
+          <option value="hour">时薪</option>
+        </select>
+      </div>
+      <div>
+        <label>薪资金额：</label>
+        <input id="salary-input" type="number" min="0" step="0.01" placeholder="请输入金额">
+        <span id="salary-unit">元</span>
+      </div>
+      <div>
+        <label>每日工时：</label>
+        <input id="workhour-input" type="number" min="0" max="24" step="0.1" placeholder="如7.5">
+        <span>小时</span>
+      </div>
+      <div>
+        <label>货币：</label>
+        <select id="currency">
+          <option value="CNY">元</option>
+          <option value="USD">$</option>
+          <option value="EUR">€</option>
+        </select>
+      </div>
+    </div>
+    <div class="main compact">
+      <div class="income-per-sec">
+        <span>每秒收入：</span>
+        <span id="per-sec" class="gold-num">0.00</span>
+        <span id="currency-symbol">元/秒</span>
+      </div>
+      <div class="today-income">
+        <span>今日已赚：</span>
+        <span id="today-earned" class="gold-num">0.00</span>
+        <span id="currency-symbol2">元</span>
+      </div>
+      <div class="controls compact">
+        <button id="start-pause">开始</button>
+        <button id="reset">重置今日收益</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
